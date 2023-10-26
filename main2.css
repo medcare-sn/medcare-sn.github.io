@@ -1,0 +1,255 @@
+/* lien permettant d'avoir les police,les couleur,...*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+:root{
+    --green: #16a085;
+    --black:#444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+/* style pour la police de toute la page*/
+*{
+    font-family: 'Poppins', sans-serif;
+}
+/* style pour html*/
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+/* style pour la barre de navigation*/
+.header{
+    padding: 1rem 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+}
+/* style pour la barre de navigation  patie logo*/
+.header .logo {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+/* style pour la barre de navigation pour le petit coeur avant logo */
+.header .logo i {
+    color: #fff;
+}
+/* style pour la barre de navigation les liens service ,accueil,ect*/
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color);
+    margin-left: 2rem;
+    text-decoration: none;
+}
+/* style pour la barre de navigation les liens service ,accueil,ect au toucher*/
+.header .navbar a:hover {
+    color: white;
+}
+/* style pour le texte d'en tete de la page*/
+.heading{
+    text-align: center;
+    /*padding-bottom: 2rem;*/
+    margin-top: 70px;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size:x-large;
+    letter-spacing: .4rem;
+}
+/* style pour le texte d'en tete de la page partie span*/
+.heading span{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-top:10px;
+}
+/* style pour la barre de navigation */
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+/* style pour le formulaire*/
+form{
+    width:26%;
+    margin-bottom:90px;
+    height:90px;
+    position: absolute;
+    text-align: center;
+}
+select{
+    display: flex;
+    flex-direction: row;
+}
+/* style pour le responsive quand la taille est réduite*/
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        position: absolute;
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    #menu-btn {
+        display: initial;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+@media(max-width:200px){
+  form{
+    width: 200px;
+    position: absolute;
+  }
+}
+/* style pour le responsive quand la taille est réduite*/
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+    .box{
+        width: 40%;
+    }
+    .boxs{
+        width:5%;
+    }
+}
+section:nth-child(even){
+  background: #f5f5f5;
+  padding-bottom: 4rem;
+}
+/* style pour le grand div*/
+.services .box-container {
+    display:column;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+/* style pour le premier sous div*/
+.services .box-container .box {
+    background: #fff;
+    text-align: center;
+    font-size:small;
+    margin-left: 28%;
+    margin-top: 8px;
+    margin-bottom:12px;
+    width:42%;
+    height: 40%;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+}
+/* style pour le second sous div*/
+.boxs{
+    background: #fff;
+    text-align: left;
+    font-size:small;
+    margin-left:28%;
+    margin-top:0px;
+    width:35%;
+    height:270px;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 4.8rem;
+}
+h3{
+    font-family: sans-serif;
+    margin-top: 2%;
+    margin-bottom:2%;
+    font-size:large;
+    text-align: center;
+   }
+h4{
+    text-align: center;
+    margin-top: 2px;
+    font-size: large;
+    color:#16a085;
+}
+P{
+    margin-top:5px;
+    margin-bottom:10px;
+}
+/* style pour le symbol medecin en haut*/
+.services .box-container .box i {
+    color: var(--green);
+    font-size: 5rem;
+    text-align: center;
+}
+/* style pour les titre h3*/
+.services .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5 rem;
+    padding: 1rem 0;
+}
+/* style pour les paragraphes*/
+.services .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+/* style pour les boutons envoyer et annuler*/
+.btna {
+    width:130px;
+    background: #16a085;
+    border:var(--border);
+    color:#fff;
+    cursor: pointer;
+    font-size: large;
+}
+.btna:hover {
+    background: var(--green);
+    color: black;
+}
+/* style pour le lien vers la page des reservation effectuées*/
+.btnaS {
+    width:90%;
+    height: 25%;
+    display: block;
+    flex-direction:row;
+    margin-top:150px;
+    background: #16a085;
+    text-align: start;
+    padding-left: 1rem;
+    border:var(--border);
+    border-radius: .5rem;
+    box-shadow: .5rem;
+    color:#fff;
+    cursor: pointer;
+    font-size: large;
+}

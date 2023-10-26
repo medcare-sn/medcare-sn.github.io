@@ -1,0 +1,230 @@
+/*lien permettant d'avoir les police ,les couleurs,...*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+
+/*style pour la police sur toute la page*/
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+/*style pour le html*/
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/*style pour la barre de navigation*/
+.header {
+    padding: 1rem 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+}
+
+/*style pour le logo medecin*/
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/*style pour l'icone heart*/
+.header .logo i {
+    color: #fff;
+}
+
+/*style pour la barre de navigation des liens accueil,service,...*/
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color);
+    margin-left: 2rem;
+}
+
+/*style les liens au survol*/
+.header .navbar a:hover {
+    color: white;
+}
+
+/*style pour le texte d'entete de la page*/
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-top: 70px;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: x-large;
+    letter-spacing: .4rem;
+}
+
+/*style pour l'entete partie span*/
+.heading span {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-top: 10px;
+}
+
+/*style pour le menu*/
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*style pour le responsive web*/
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+section:nth-child(even) {
+    background: #f5f5f5;
+    padding-bottom: 4rem;
+}
+
+/*style pour le grand div*/
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+/*style pour les sous div*/
+.services .box-container .box {
+    background: #fff;
+    border-radius: .5rem;
+    font-size: small;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 5rem;
+}
+
+/*style pour le l'icone medecin sur i*/
+.services .box-container .box i {
+    color: var(--green);
+    font-size: 5rem;
+}
+
+/*style pour les titres h3*/
+.services .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5 rem;
+    padding: 1rem 0;
+}
+
+/*style pour les paragraphes*/
+.services .box-container .box p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+/*style pour le boutton en svoir plus*/
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #16a085;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: .5rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/*style pour le boutton en savoir plus le span*/
+.btn span {
+    padding: .1rem .1rem;
+    border-radius: .5rem;
+    background: var(--green);
+    color: #fff;
+    margin-left: .5rem;
+}
+
+/*style pour le boutton en savoir plus au survol*/
+.btn:hover {
+    background: var(--green);
+    color: black;
+}
+
+/*style pour le boutton en savoir plus le span au survolss*/
+.btn:hover span {
+    background: var(--green);
+    color: #fff;
+    margin-left: 1rem;
+}

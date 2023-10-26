@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8"> <!-- Spécifie l'encodage des caractères pour le document. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configure le viewport pour le design responsive. -->
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Lie au fichier CSS personnalisé. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Lie à une feuille de style externe Font Awesome. -->
+    <title>page de commentaire</title> <!-- Définit le titre de la page web. -->
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i>Medecine</a> <!-- Logo et titre du site. -->
+        <nav class="navbar">
+            <a href="pgyneco.html">Accueil</a>
+            <!-- Liens de navigation. Ajustez les attributs href avec des URL valides. -->
+            <a href="pageservice.html">Services</a>
+            <a href="page3.html">Medecin</a>
+            <a href="Connexion pat.html">Connexion</a>
+            <a href="aide.html">Aide</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div> <!-- Bouton de menu pour mobile. -->
+    </header>
+    <h1>commentaire</h1> <!-- Titre principal de la page. -->
+    <div class="comment-section">
+        <h2>ajouter un commentaire</h2> <!-- Sous-titre de la section de commentaires. -->
+        <form id="comment-from"> <!-- Formulaire de commentaire. -->
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required> <!-- Champ de saisie du nom. -->
+            <br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required> <!-- Champ de saisie de l'adresse e-mail. -->
+            <br>
+            <label for="comment">commentaire :</label>
+            <textarea id="comment" rows="3" required></textarea> <!-- Zone de texte pour le commentaire. -->
+            <br>
+            <div class="rating"> <!-- Section de notation par étoiles. -->
+                <span class="star" data-rating="1">&#9733;</span>
+                <span class="star" data-rating="2">&#9733;</span>
+                <span class="star" data-rating="3">&#9733;</span>
+                <span class="star" data-rating="4">&#9733;</span>
+                <span class="star" data-rating="5">&#9733;</span>
+            </div>
+            <p id="ratingText">Votre évaluation : 0 étoiles</p> <!-- Texte affichant la notation. -->
+            <button type="submit">envoyer</button> <!-- Bouton de soumission du formulaire de commentaire. -->
+        </form>
+        <ul id="comment-list">
+            <!-- Les commentaires seront ajoutés ici dynamiquement via JavaScript. -->
+        </ul>
+    </div>
+    <!-- Les fichiers JavaScript sont inclus pour l'interactivité. -->
+    <script src="script.js"></script> <!-- Votre fichier JavaScript personnalisé. -->
+    <script src="star.js"></script> <!-- JavaScript pour la fonctionnalité de notation par étoiles. -->
+
+</body>
+
+</html>

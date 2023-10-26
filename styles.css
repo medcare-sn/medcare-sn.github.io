@@ -1,0 +1,247 @@
+/* Styles pour les balises 'p' pour augmenter la taille de la police */
+p {
+    font-size: larger;
+}
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    align-items: left; /* Il n'y a pas de propriété 'align-items' pour 'body' */
+    position: relative;
+}
+
+/* Styles pour la section de commentaires */
+.comment-section {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-width: none; /* 'border-width' ne prend pas de valeur 'none' */
+    border-bottom: none; /* 'border-bottom' ne prend pas de valeur 'none' */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le titre h1 */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles pour le titre h2 */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #16a085;
+    border: none; /* 'border' est défini, mais sans valeur */
+}
+
+/* Styles pour les étiquettes 'label' */
+label {
+    width: 1000px; /* Largeur excessive, peut provoquer un débordement */
+    height: 10px; /* Hauteur trop petite, peut tronquer le texte */
+    display: black; /* Il n'y a pas de valeur 'black' pour 'display' */
+    margin-bottom: 10px;
+    font-weight: bold;
+    top: 10px; /* L'élément 'label' ne possède pas de propriété 'top' */
+    left: 10px; /* L'élément 'label' ne possède pas de propriété 'left' */
+}
+
+/* Styles pour les champs de saisie 'input' et 'textarea' */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 200px;
+    height: 10; /* Hauteur manquante ou incorrecte, peut provoquer des problèmes */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    right: 30px; /* 'right' ne s'applique généralement pas aux éléments 'input' */
+    padding-top: 10px;
+    top: 10px; /* 'top' ne s'applique généralement pas aux éléments 'input' */
+}
+
+/* Styles pour le formulaire */
+form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: none; /* La valeur 'none' n'affecte pas la couleur de fond */
+    padding: 20px;
+    border-radius: none; /* La valeur 'none' n'affecte pas la propriété 'border-radius' */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1); /* Ombre trop intense */
+}
+
+/* Styles pour le bouton */
+button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    height: 50%; /* La hauteur est généralement spécifiée en pixels ou en pourcentage */
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+    float: right;
+    font-size: small;
+}
+
+/* Styles pour le bouton au survol de la souris */
+button:hover {
+    background-color: #33b300;
+}
+
+/* Styles pour le bouton lorsque désactivé */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Importe la police 'Poppins' depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+/* Définition de variables de couleurs et de style */
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+
+/* Styles pour l'élément 'html' */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/* Styles pour l'en-tête (header) de la page */
+.header {
+    padding: 1rem 3%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+}
+
+/* Styles pour le logo dans l'en-tête */
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Styles pour les icônes du logo */
+.header .logo i {
+    color: #fff;
+}
+
+/* Styles pour les liens de navigation dans l'en-tête */
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color); /* Typo : --light-color */
+    margin-left: 2rem;
+}
+
+/* Styles pour les liens de navigation au survol de la souris */
+.header .navbar a:hover {
+    color: white;
+}
+
+/* Styles pour le bouton de menu (mobile) */
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Styles pour le titre principal */
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+/* Styles pour une partie du titre en couleur verte */
+.heading span {
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+/* Styles pour les étoiles du système de notation */
+.star {
+    cursor: pointer;
+    font-size: 30px;
+    color: #cccccc;
+    border: none; /* La valeur 'none' n'est pas appropriée pour 'border' */
+    margin-right: 5px;
+}
+
+/* Styles pour les étoiles au survol de la souris ou sélectionnées */
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+/* Styles pour la section de notation */
+.rating {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* Styles pour les étoiles */
+.star {
+    cursor: pointer;
+    color: #cccccc;
+    border: #21dab5;
+}
+
+
+/* Styles pour les écrans encore plus petits (écrans de téléphone très étroits) */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Styles pour les écrans de petite taille (moins de 768px) */
+@media (max-width: 767px) {
+    . {
+        width: 90%; /* Par exemple, réduisez la largeur pour les écrans plus petits */
+    }
+}
+
+/* Styles pour les écrans de taille moyenne (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .comment-section {
+        width: 90%; /* Par exemple, ajustez la largeur pour les tablettes */
+    }
+}
+
+/* Styles pour les écrans de grande taille (1024px et plus) */
+@media (min-width: 1024px) {
+    .comment-section {
+        width: 80%; /* Par exemple, ajustez la largeur pour les ordinateurs de bureau */
+    }
+}

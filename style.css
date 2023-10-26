@@ -1,0 +1,329 @@
+/* Fichier CSS externe pour le style de la page administration */
+
+/* Définition des couleurs utilisées */
+:root {
+    --couleur-principale: #16a085; /* Vert */
+    --couleur-secondaire: #F44336; /* Rouge */
+    --couleur-fond: #F0F0F0; /* Gris clair */
+    --couleur-texte: #333333; /* Gris foncé */
+}
+
+/* Style général de la page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de l'entête de la page */
+ header {
+    display: flex;
+    align-items: center;
+    background-color: var(--couleur-principale);
+    color: white;
+    padding: 10px;
+    border-radius: 10px
+} 
+
+
+
+/* Style du logo de l'application */
+/*.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+*/
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--couleur-fond);
+    text-decoration: none;
+}
+
+.header .logo i {
+    color: var(--couleur-fond);
+}
+
+
+/* Style du titre de l'application */
+/*.titre {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.titre h1 {
+    font-size: 24px;
+}*/
+
+/* Style du menu de navigation */
+nav {
+    background-color: var(--couleur-fond);
+} 
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: var(--couleur-texte);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+}
+
+nav ul li a:hover {
+    background-color: var(--couleur-principale);
+    color: white;
+}
+
+nav ul li a.active {
+    background-color: var(--couleur-secondaire);
+    color: white;
+} 
+
+
+
+
+/* Style de la section principale */
+main {
+    padding: 20px;
+    border-radius: 10px
+}
+
+main h2 {
+    font-size: 20px;
+}
+
+main h3 {
+    font-size: 18px;
+}
+
+/* Style des cartes du tableau de bord administratif */
+.cartes {
+    /* Affichage des cartes en ligne avec un espacement entre elles */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.carte {
+    /* Définition de la largeur, de la hauteur, du bord et de l'ombre des cartes */
+    width: 200px;
+    height: 150px;
+    border: 1px solid var(--couleur-texte);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    /* Affichage du contenu des cartes en colonne et au centre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carte-titre {
+    /* Définition de la taille, de la couleur et du poids du texte des titres des cartes */
+    font-size: 16px;
+    color: var(--couleur-principale);
+    font-weight: bold;
+}
+
+.carte-valeur {
+    /* Définition de la taille, de la couleur et du poids du texte des valeurs des cartes */
+    font-size: 24px;
+    color: var(--couleur-texte);
+    font-weight: normal;
+}
+
+.carte-lien {
+    /* Définition de la taille, de la couleur et du poids du texte des liens des cartes */
+    font-size: 14px;
+    color: var(--couleur-texte);
+    font-weight: normal;
+}
+
+.carte-lien a {
+    /* Suppression du soulignement des liens des cartes */
+    text-decoration: none;
+}
+
+.carte-lien a:hover {
+    /* Changement de la couleur des liens des cartes au survol */
+    color: var(--couleur-secondaire);
+}
+
+/* Définition des couleurs de fond pour les sous-sections */
+section#gestion-utilisateurs {
+    background-color: lightblue;
+}
+
+section#gestion-contenus {
+    background-color: lightgreen;
+}
+
+section#gestion-commentaires-avis {
+    background-color: lightpink;
+}
+
+/* Style des sous-sections */
+section {
+    margin-bottom: 20px;
+}
+
+section form {
+    display: flex;
+    align-items: center;
+}
+
+section form label {
+    margin-right: 10px;
+}
+
+section form input, section form select, section form textarea {
+    margin-right: 10px;
+}
+
+section form input[type="text"], section form input[type="email"], section form input[type="password"], section form select, section form textarea {
+    border: 1px solid var(--couleur-texte);
+}
+
+section form input[type="submit"] {
+    background-color: var(--couleur-principale);
+    color: white;
+    border: none;
+}
+
+section table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+section table th, section table td {
+    border: 1px solid var(--couleur-texte);
+    padding: 10px;
+}
+
+section table th {
+    background-color: var(--couleur-principale);
+    color: white;
+}
+
+section table td:last-child {
+    text-align: center;
+    
+}
+section table th:first-child {
+    border-top-left-radius : 10px ;
+}
+section table th:last-child {
+    border-top-right-radius : 10px ;
+}
+section table tr:last-child td:first-child {
+    border-bottom-left-radius : 10px ;
+}
+section table tr:last-child td:last-child {
+    border-bottom-right-radius : 10px ;
+}
+
+/* Style des boutons d'action (modifier, supprimer, approuver, rejeter) */
+.action-button {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.action-button.modifier {
+    background-color: #2196F3; /* Bleu */
+    border-radius : 5px
+}
+
+.action-button.supprimer {
+   background-color : var(--couleur-secondaire); /* Rouge */
+   border-radius : 5px
+}
+
+.action-button.approuver {
+   background-color : var(--couleur-principale); /* Vert */
+   border-radius : 5px
+}
+
+.action-button.rejeter {
+   background-color : #FF9800; /* Orange */
+   border-radius : 5px
+}
+
+
+/* Style du pied de page */
+footer {
+   /*display : flex ;
+   justify-content : space-around ;
+   align-items : center ;
+   background-color : var(--couleur-fond) ;*/
+   padding : 10px ;
+    /* Affichage du pied de page en ligne avec un espacement entre les éléments */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Définition de la couleur de fond, de la hauteur et du bord du pied de page */
+    background-color: var(--couleur-fond);
+    height: 100px;
+    /*border-top: 1px solid var(--couleur-texte);*/
+    border-radius: 10px;
+}
+
+footer p {
+   margin-right : 10px ;
+   /*font-size: 14px;
+    color: var(--couleur-texte);
+    font-weight: normal;*/
+}
+
+footer ul {
+   list-style-type : none ;
+  display : flex ;
+   align-items : center ;*/
+}
+
+footer ul li a {
+
+    /*font-size: 14px;
+    font-weight: normal;*/
+   display : block ;
+   padding : 5px ;
+   color : var(--couleur-texte) ;
+   text-decoration : none ;
+}
+
+footer ul li a:hover {
+   color : var(--couleur-principale)!important;
+}
+
+
+/* Style des icônes des réseaux sociaux */
+.reseaux-sociaux img {
+   width : 20px ;
+   height : 20px ;
+}
+
+
+/* Média query pour les écrans inférieurs à 600 pixels */
+@media screen and (max-width: 600px) {
+    /* Modification du style du menu de navigation */
+    nav ul {
+        /* Affichage du menu en colonne au lieu de ligne */
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        /* Augmentation de la taille du texte des liens */
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Médecin</title>
+    <link rel="stylesheet" href="med.css">
+</head>
+
+<body>
+    <div class="accueil">
+
+        <p></p><br> <br>
+        <h1>
+            <marquee class="a">INSCRIPTION MEDECIN</marquee>
+        </h1>>
+        <form>
+            <div class="container">
+                <form action="traitement.php" method="post">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Numéro de téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+                        <small>Le numéro doit être composé de 10 chiffres.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationalite">Nationalite</label>
+                        <input type="text" id="nationalite" name="nationalite" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="domicile">Domicile</label>
+                        <input type="text" id="domicile" name="domicile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialite">Spécialité</label>
+                        <input type="text" id="specialite" name="specialite" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirmer votre Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit"><a href="page_admin.html">S'Inscrire</a></button>
+                </form>
+            </div>
+        </form>
+</body>
+
+</html>

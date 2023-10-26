@@ -1,0 +1,116 @@
+body{
+    font-family: :Arial, sans-serif;
+}
+header{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+p{
+    font-size: large;
+   
+}
+
+.section {	
+    background-color: white; /* Couleur verte */
+    margin: 10px;
+    padding: 10px;
+    
+   
+}
+.section h2 a {
+    text-decoration-line: none; /* Enlever le soulignement des liens */
+    color: #16a085;
+}
+.section a :hover{
+    text-decoration: underline  ;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+:root{
+    --green: #16a085;
+    --black:#444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.header{
+    padding: 1rem 3%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header .logo i {
+    color: #fff;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color);
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover {
+    color: white;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+.heading span{
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.btn:hover {
+    background: var(--green);
+    color: black;
+}
+
+.btn:hover span {
+    background: var(--green);
+    color: #fff;
+    margin-left: 1rem;
+}

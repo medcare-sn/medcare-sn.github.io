@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Inclure la bibliothèque CSS de Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Définir les styles CSS pour la table -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awes
+    ome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="confi.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i>Medecine </a>
+        <nav class="navbar">
+            <a href="accueil.html">Accueil</a>
+            <a href="pageservice.html">Services</a>
+            <a href="medecin.html">Medecin</a>
+            <a href="Connexion pat.html">Connexion</a>
+            <a href="aide.html">Aide</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <section class="rien">
+        <div class="k">
+            <h4 class="heading">Voici la Liste des réservations <span>que vous avez eu a faire
+                </span></h4>
+            <!--la table des anciennes et futures reservations-->
+            <table class="tab" id="myTable">
+                <tr class="ligne">
+                    <td class="cols">Date</td>
+                    <td class="cols">Service</td>
+                    <td class="cols">Medecin</td>
+                    <td class="cols">R-V</td>
+                    <td class="cols">Modifier</td>
+                </tr>
+                <tr class="ligne">
+                    <td class="col">18-06-2023</td>
+                    <td class="col">Cardiologie</td>
+                    <td class="col">Dr O.DIOP</td>
+                    <td class="col">Consultation</td>
+                    <td class="col"><button class="btn">Validé</button>
+
+                    </td>
+                    <!--validé signifie les visites que l'utilisateur a déja 
+               effectué-->
+
+                </tr>
+                <tr class="ligne">
+                    <td class="col">07-07-23</td>
+                    <td class="col">Cardiologie</td>
+                    <td class="col">Dr 0.DIOP</td>
+                    <td class="col">suivi de traitement</td>
+                    <td class="col"><button class="btn">Validé</button>
+
+
+                </tr>
+                <tr class="ligne">
+                    <td class="col">12-07-23</td>
+                    <td class="col">Cardiologie</td>
+                    <td class="col">Dr H.TALL</td>
+                    <td class="col">Consultation</td>
+                    <td class="col"><button class="btn">Validé</button>
+
+                </tr>
+
+                <tr class="ligne">
+                    <td class="col">01-09-23</td>
+                    <td class="col">Cardiologie</td>
+                    <td class="col">Dr H.TALL</td>
+                    <td class="col">Suivi de traitement</td>
+                    <!--les boutons modifier et supprimer permettent respectivement de modifier les
+                 prochaines reservations ou de les annuler-->
+                    <p>
+                        <td class="col"> <button class="btn"> <a href="pageservice.html">Modifier</a> </button>
+                            <button class=" btns" onclick="deleteRow(this)">effacer</button>
+                        </td>
+                    </p>
+
+
+                </tr>
+                <tr class="ligne">
+                    <td class="col">20-09-23</td>
+                    <td class="col">Dermatologie</td>
+                    <td class="col">Dr S.NDIAYE</td>
+                    <td class="col">Operation chirurgicale</td>
+                    <p>
+                        <td class="col"> <button class="btn"> <a href="pageservice.html">Modifier</a> </button>
+                            <button class=" btns" onclick="deleteRow(this)">effacer</button>
+                        </td>
+                    </p>
+
+                </tr>
+
+            </table>
+    </section>
+    <!--Le lien qui nous méne vers la page cartpographie-->
+    <p class="haw"> Pour mieux profiter de l'experience veuillez cliquer <a href="cartographie.html">ICI</a> et
+        visualiser les
+        différents services proche de vous</p>
+    <script>
+
+        function deleteRow(button) {
+            var row = button.parentNode.parentNode; // Obtient la ligne parente du bouton
+            var table = row.parentNode; // Obtient la table parente de la ligne
+            table.deleteRow(row.rowIndex); // Supprime la ligne en utilisant son indice
+        }
+    </script>
+
+</body>
+
+</html>

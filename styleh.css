@@ -1,0 +1,229 @@
+/* Définit les styles de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Importe la police 'Poppins' depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+/* Définit des variables de couleurs et de style */
+:root {
+    --green: #16a085;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--green);
+}
+
+/* Configure la taille de police de base et d'autres propriétés pour l'élément 'html' */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/* Styles pour l'en-tête (header) de la page */
+.header {
+    padding: 1rem 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+}
+
+/* Styles pour le logo dans l'en-tête */
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/* Styles pour les icônes du logo */
+.header .logo i {
+    color: #fff;
+}
+
+/* Styles pour les liens de navigation dans l'en-tête */
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color);
+    margin-left: 2rem;
+}
+
+/* Styles pour les liens de navigation au survol de la souris */
+.header .navbar a:hover {
+    color: white;
+}
+
+/* Styles pour le bouton de menu (mobile) */
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Styles pour les titres principaux */
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+/* Styles pour une partie du titre en couleur verte */
+.heading span {
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+/* Styles pour les boutons */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #16a085;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: var(--border);
+    border-radius: .5rem;
+    box-shadow: .5rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/* Styles pour une partie du bouton avec fond vert */
+.btn span {
+    padding: .1rem .1rem;
+    border-radius: .5rem;
+    background: var(--green);
+    color: #fff;
+    margin-left: .5rem;
+}
+
+/* Styles pour le bouton au survol de la souris */
+.btn:hover {
+    background: var(--green);
+    color: black;
+}
+
+/* Styles pour une partie du bouton au survol de la souris avec fond vert */
+.btn:hover span {
+    background: var(--green);
+    color: #fff;
+    margin-left: 1rem;
+}
+
+/* Styles pour une liste de liens d'aide */
+#help-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+/* Styles pour les éléments de liste de liens d'aide */
+#help-links li {
+    margin-bottom: 10px;
+}
+
+/* Styles pour les liens d'aide */
+#help-links a {
+    text-decoration: none;
+    color: rgb(47, 255, 141);
+    cursor: pointer;
+    font-size: x-large;
+}
+
+/* Styles pour le contenu d'aide (initialement masqué) */
+#help-content {
+    display: none;
+    margin-top: 20px;
+    font-size: medium;
+}
+
+/* Styles pour afficher le contenu d'aide actif */
+#help-content.active {
+    display: block;
+    font-family: Arial, sans-serif;
+
+
+}
+
+
+.active {
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* Couleur du texte */
+    font-size: 16px;
+
+}
+
+
+/* Styles pour les médias plus petits (écrans étroits) */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+/* Styles pour les écrans encore plus petits (écrans de téléphone) */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+
+/* Styles pour les écrans encore plus petits (écrans de téléphone très étroits) */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

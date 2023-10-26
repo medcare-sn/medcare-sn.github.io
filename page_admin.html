@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin medecin</title>
+    <link rel="stylesheet" href="page_admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!-- la barre d'en haut avec les differents elements -->
+    <header class="header">
+        <a href="acceuil.html" class="logo"><i class="fas fa-heartbeat"></i>Medecine</a>
+        <nav class="navbar">
+            <a class="menu" href="accueil.html">accueil</a>
+            <a class="menu" href="aide.html">aide</a>
+            <a class="menu" href="#">
+                <div class="notification-bell">
+                    <div class="bell-icon">
+                        <img class="image" src="cloche2.png" alt="Bell Icon">
+                        <div class="notification-count">3</div>
+                    </div>
+                    <div class="notifications">
+                        <!-- Les notifications seront ajoutées ici dynamiquement via JavaScript -->
+                    </div>
+                </div>
+            </a>
+        </nav>
+        <div id="menu"></div>
+    </header>
+    <section class="contenue">
+        <div class="encours">
+            <h1 class="heading">Reservation en cours</h1><br>
+            <div class="box-premier">
+                <h2 class="accepter">accepter les reservation</h2>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec dieng samedi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">refuser</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec hawa tall lundi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">refuser</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec sam lundi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">refuser</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec sokhna diarra jeudi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">refuser</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec fatou diao mardi 18h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">refuser</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec ousmane diop vendredi 15h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="accepter-btn">accepter</button>
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <h2 class="accepter">rendez-vous deja accpeter</h2>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec dieng samedi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec hawa tall lundi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec sam lundi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec sokhna diarra jeudi 8h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec fatou diao mardi 18h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div>
+                        <p>rendez-vous avec ousmane diop vendredi 15h</p>
+                    </div>
+                    <div class="bouton">
+                        <button class="reffuser-btn">annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="statisque">statisques</h1>
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+
+    </section>
+    <footer></footer>
+    <script src="adminmedecin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+.image2 {
+
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-top: 0.1rem;
+    height: 350px;
+    border-width: 0px;
+    border-color: blue;
+    position: fixed;
+}
+
+/* Pour les tablettes orientation portrait*/
+@media (max-width: 768px) {
+    .image2 {
+        width: 100%;
+        background-repeat: no-repeat;
+        margin-top: 0.1rem;
+        height: 350px;
+        border-width: 0px;
+        border-color: blue;
+        position: fixed;
+        /* Autres styles */
+    }
+}
+
+/* Styles pour les téléphones mobiles en orientation portrait */
+@media (max-width: 480px) {
+    .image2 {
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-top: 0.1rem;
+        height: 350px;
+        border-width: 0px;
+        border-color: blue;
+        position: fixed;
+        /* Autres styles */
+    }
+}
+
+
+/* Média query pour les tablettes et téléphones */
+@media (max-width: 768px) {
+    .image2 {
+        max-width: 100%;
+        background-repeat: no-repeat;
+        margin-top: 0.1rem;
+        height: 350px;
+        border-width: 0px;
+        border-color: blue;
+        position: fixed;
+    }
+}
+
+
+.image1 {
+
+    background-repeat: no-repeat;
+    width: 8%;
+    margin-top: -3.9rem;
+    height: 60px;
+    border-width: 1px;
+    border-color: blue;
+    position: fixed;
+    float: left;
+    left: 10%;
+}
+
+.hospi {
+    color: green;
+    margin-top: 1rem;
+    font-family: cursive;
+    position: fixed;
+    float: left;
+    left: 20%;
+    margin-top: -3.1rem;
+}
+
+.tel {
+    background-color: rgba(0, 128, 58, 0.589);
+    position: fixed;
+    float: left;
+    left: 20%;
+    padding: 30px;
+    width: 150px;
+    margin-top: O.5rem;
+}
+
+.emer {
+    font-family: fantasy;
+    color: white;
+    font-size: small;
+    margin-top: -1.5rem;
+    position: fixed;
+    float: left;
+    left: 21%;
+}
+
+.num {
+    color: white;
+    font-size: small;
+    margin-top: 0.2rem;
+    position: fixed;
+    float: left;
+    left: 21%;
+}
+
+.hom {
+    background-color: #16a085;
+    padding: 13px;
+    width: 1330px;
+    margin-top: 4rem;
+}
+
+.horloge {
+    background-image: url();
+    position: fixed;
+    float: left;
+    left: 75%;
+    height: 6%;
+    width: 3%;
+    margin-top: -3.4rem;
+
+}
+
+.home {
+    color: aliceblue;
+    float: left;
+    left: 10%;
+    position: fixed;
+    margin-top: -0.5rem;
+    font-family: cursive;
+    font-size: small;
+}
+
+.mede {
+    color: aliceblue;
+    float: left;
+    left: 15%;
+    position: fixed;
+    margin-top: -0.5rem;
+    font-family: cursive;
+    font-size: small;
+}
+
+.dep {
+    color: aliceblue;
+    float: left;
+    left: 21%;
+    position: fixed;
+    margin-top: -0.5rem;
+    font-family: cursive;
+    font-size: small;
+}
+
+.faq {
+    color: aliceblue;
+    float: left;
+    left: 30%;
+    position: fixed;
+    margin-top: -0.5rem;
+    font-family: cursive;
+    font-size: small;
+}
+
+.description1 {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    position: fixed;
+    left: 2%;
+    margin-top: 1.5rem;
+
+    font-weight: bold;
+}
+
+.description2 {
+    color: white;
+    font-family: cursive;
+    float: left;
+    position: fixed;
+    left: 2%;
+    margin-top: 3.3rem;
+
+    font-weight: bolder;
+}
+
+.description3 {
+    color: white;
+    font-family: cursive;
+    float: left;
+    position: fixed;
+    left: 2%;
+    margin-top: 7rem;
+
+    font-weight: bolder;
+}
+
+.description4 {
+    color: white;
+    font-family: cursive;
+    float: left;
+    position: fixed;
+    left: 10%;
+    margin-top: 5rem;
+
+    font-weight: bolder;
+}
+
+.block {
+    border-color: aliceblue;
+    background-color: rgba(245, 245, 220, 0.884);
+    float: left;
+    position: fixed;
+    left: 1.9%;
+    margin-top: 9rem;
+    padding: 5%;
+    width: 75px;
+
+}
+
+.heure1 {
+
+    color: green;
+    font-family: cursive;
+    position: fixed;
+    float: left;
+    left: 80%;
+    margin-top: -3.4rem;
+    font-size: small;
+}
+
+.heure2 {
+
+    color: green;
+    font-family: cursive;
+    position: fixed;
+    float: left;
+    left: 80%;
+    margin-top: -2rem;
+    font-size: small;
+}
+
+.heure4 {
+
+    color: green;
+    font-family: cursive;
+    position: fixed;
+    float: left;
+    left: 87%;
+    margin-top: -2rem;
+    font-size: small;
+}
+
+.heure3 {
+
+    color: green;
+    font-family: cursive;
+    position: fixed;
+    float: left;
+    left: 87%;
+    margin-top: -3.4rem;
+    font-size: small;
+}
+
+.loca {
+    width: 3%;
+    height: 6%;
+    margin-top: -3.4rem;
+    float: left;
+    position: fixed;
+    left: 40%;
+}
+
+.local {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: -2.7rem;
+    float: left;
+    position: fixed;
+    left: 43%;
+}
+
+.serv {
+    font-family: cursive;
+    margin-top: 23rem;
+    float: left;
+    position: fixed;
+    left: 3%;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.trait {
+    margin-top: 24rem;
+    float: left;
+    position: fixed;
+    left: 3%;
+    color: rgba(0, 128, 58, 0.589);
+}
+
+.perfu {
+    margin-top: 26rem;
+    float: left;
+    position: fixed;
+    left: 3%;
+    width: 7%;
+    height: 10%;
+
+}
+
+.ambu {
+    margin-top: 26rem;
+    float: left;
+    position: fixed;
+    left: 25%;
+    width: 7%;
+    height: 10%;
+
+}
+
+.os {
+    margin-top: 31rem;
+    float: left;
+    position: fixed;
+    left: 3%;
+    width: 7%;
+    height: 10%;
+
+}
+
+.inf {
+    margin-top: 31rem;
+    float: left;
+    position: fixed;
+    left: 25%;
+    width: 7%;
+    height: 10%;
+
+}
+
+.ambuecr {
+    margin-top: 26rem;
+    float: left;
+    position: fixed;
+    left: 33%;
+    color: rgba(0, 128, 58, 0.589);
+    font-family: cursive;
+    font-size: small;
+}
+
+.perfuecr {
+    margin-top: 27rem;
+    float: left;
+    position: fixed;
+    left: 9%;
+    color: rgba(0, 128, 58, 0.589);
+    font-family: cursive;
+    font-size: small;
+}
+
+.osecr {
+    margin-top: 32rem;
+    float: left;
+    position: fixed;
+    left: 10%;
+    color: rgba(0, 128, 58, 0.589);
+    font-family: cursive;
+    font-size: small;
+}
+
+.infecr {
+    margin-top: 32rem;
+    float: left;
+    position: fixed;
+    left: 31%;
+    color: rgba(0, 128, 58, 0.589);
+    font-family: cursive;
+    font-size: small;
+}
+
+.image3 {
+    margin-top: 24rem;
+    float: left;
+    position: fixed;
+    left: 69%;
+    width: 30%;
+    height: 27%;
+    background-color: white;
+
+}
+
+.barre1 {
+    float: left;
+    position: fixed;
+    left: 78%;
+    width: 1%;
+    height: 2%;
+    margin-top: -0.8rem;
+    color: white;
+}
+
+.barre2 {
+    float: left;
+    position: fixed;
+    left: 78%;
+    width: 1%;
+    height: 2%;
+    margin-top: -1rem;
+    color: white;
+}
+
+.barre3 {
+    float: left;
+    position: fixed;
+    left: 78%;
+    width: 1%;
+    height: 2%;
+    margin-top: -1.2rem;
+    color: white;
+}
+
+.recherche {
+    float: left;
+    position: fixed;
+    left: 76%;
+    width: 1%;
+    height: 2%;
+    margin-top: -0.3rem;
+    color: white;
+
+}
+
+.circle1 {
+    width: 2%;
+    height: 3%;
+    border-radius: 50%;
+    background-color: red;
+    float: left;
+    position: fixed;
+    left: 70%;
+    margin-top: 0.9rem;
+}
+
+.p {
+    float: left;
+    position: fixed;
+    left: 70.5%;
+    color: white;
+}
+
+.fatou {
+    float: left;
+    position: fixed;
+    left: 73%;
+    margin-top: -0.1rem;
+    font-family: cursive;
+    font-size: x-small;
+}
+
+.ablaye {
+    float: left;
+    position: fixed;
+    left: 73%;
+    margin-top: 2.3rem;
+    font-family: cursive;
+    font-size: x-small;
+}
+
+.circle2 {
+    width: 2%;
+    height: 3%;
+    border-radius: 50%;
+    background-color: green;
+    float: left;
+    position: fixed;
+    left: 70%;
+    margin-top: 3.5rem;
+}
+
+.a {
+    margin-top: 3.7rem;
+    color: white;
+    float: left;
+    left: 70.5%;
+    position: fixed;
+}
+
+.voir {
+    margin-top: 33.1rem;
+    float: left;
+    left: 70.5%;
+    position: fixed;
+    font-family: cursive;
+    font-size: small;
+    color: black;
+}

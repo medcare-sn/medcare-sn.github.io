@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PATIENT</title>
+    <link rel="stylesheet" href="style3.css"> <!-- Lien vers la feuille de style externe -->
+</head>
+
+<body>
+    <div class="accueil">
+        <p></p>
+        <h1>
+            <marquee>CONNEXION</marquee>
+        </h1> <!-- Titre de la page -->
+        <form>
+            <div class="coordonnees">
+                <p>
+                    <label for="email" class="a">adresse électronique :</label>
+                    <!-- Champ pour l'adresse électronique -->
+                    <input type="email" id="email" name="email" placeholder="xxx@gmail.com" />
+                </p>
+                <p>
+                    <label for="mot de passe">mot de passe :</label> <!-- Champ pour le mot de passe -->
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" />
+                </p>
+            </div>
+            <div class="l">
+                <a href="#" id="connexion">Se connecter</a> <!-- Bouton de connexion -->
+            </div>
+            <small>Vous n'avez pas de compte.</small>
+            <div class="l">
+                <a href="patient.html">Inscrivez-vous</a> <!-- Lien vers la page d'inscription -->
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('connexion').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var username = document.getElementById('email').value;
+            var password = document.getElementById('mot_de_passe').value;
+
+            // Vérifier les identifiants
+            if (username === 'admin@admin.com' && password === 'adminpassword') {
+                alert('Connexion réussie en tant qu\'administrateur');
+                window.location.href = 'index_distributeur.html'; // Rediriger vers la page d'administration
+            } else if (username === 'patient@gmail.com' && password === 'patientpassword') {
+                alert('Connexion réussie en tant que patient');
+                window.location.href = 'page_patient.html'; // Rediriger vers la page du patient
+            } else {
+                alert('Identifiant ou mot de passe incorrect');
+            }
+        });
+    </script>
+</body>
+
+</html>

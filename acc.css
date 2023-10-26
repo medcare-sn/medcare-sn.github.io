@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*style pour la barre de navigation*/
+.header {
+    padding: 1rem 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--green);
+    background-color: #16a085;
+}
+
+/*style pour le logo medecin*/
+.header .logo {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+/*style pour l'icone heart*/
+.header .logo i {
+    color: #fff;
+}
+
+/*style pour la barre de navigation des liens accueil,service,...*/
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--ligth-color);
+    margin-left: 2rem;
+}
+
+/*style les liens au survol*/
+.header .navbar a:hover {
+    color: white;
+}
+
+/*style pour le texte d'entete de la page*/
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-top: 70px;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: x-large;
+    letter-spacing: .4rem;
+}
+
+/*style pour l'entete partie span*/
+.heading span {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-top: 10px;
+}
+
+/*style pour le menu*/
+#menu-btn {
+    font-size: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: var(--green);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*style pour le responsive web*/
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px) {
+    #menu-btn {
+        display: initial;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        width: 30rem;
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    .header .navbar.active {
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+    }
+
+    .header .navbar a {
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+section:nth-child(even) {
+    background: #f5f5f5;
+    padding-bottom: 4rem;
+}
+
+/*.logo {
+    color: white;
+    font-size: 25px;
+}*/
+
+.image2 {
+    width: 100%;
+}
+
+.partie1 {
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    margin-top: 7rem;
+}
+
+/* Ajoutez des styles spécifiques pour chaque élément de texte si nécessaire */
+.description .description1,
+.description .description2,
+.description .description3,
+.description .description4 {
+    margin-bottom: 10px;
+    /* Ajoute de l'espace entre les éléments de texte */
+    color: #ffffff;
+    /* Couleur du texte, ajustez selon vos besoins */
+}
+
+img.ambu {
+    width: 50px;
+}
+
+img.perfu {
+    width: 60px;
+}
+
+img.os {
+    width: 50px;
+}
+
+img.inf {
+    width: 50px;
+}
+
+div.ambu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+div.perfu {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+div.os {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+div.inf {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.serv {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.circle1 {
+    width: 10%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+}
+
+.circle2 {
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: green;
+    text-align: center;
+}
+
+.commentaire {
+    font-size: 10px;
+}
+
+.txt {
+    font-size: 13px;
+    text-align: center;
+    color: #16a085;
+}
+
+@media screen and (max-width: 300px) {
+
+    a.menu {
+        margin-left: 30px;
+        color: white;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+}

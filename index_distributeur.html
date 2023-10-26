@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Administration</title>
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Entête de la page avec le logo et le nom de l'application -->
+    <!--<header>
+        <div class="logo">
+            <img src="patient-medecin-reunion.webp" alt="Logo de l'application">
+        </div>
+        <div class="titre">
+            <h1>Application de Réservation en Ligne de Rendez-Vous Médicaux</h1>
+        </div>
+    </header> -->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-heartbeat"></i>Medecine </a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <!-- Menu de navigation avec les liens vers les différentes pages -->
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="pageservice.html">Services</a></li>
+            <li><a href="page3.html">Medecin</a></li>
+            <li><a href="Connexion pat.html">Connexion</a></li>
+            <li><a href="aide.html">Aide</a></li>
+            <!-- Lien vers la page administration visible uniquement pour les administrateurs -->
+            <li><a href="index_distributeur.html" class="active">Administration</a></li>
+        </ul>
+    </nav>
+    <!-- Section principale avec le contenu de la page administration -->
+    <main>
+
+        <!-- Sous-section avec les options du tableau de bord administratif -->
+        <section id="tableau-bord-administratif">
+            <h3>Tableau de Bord Administratif</h3>
+            <!-- Affichage de quatre cartes avec les statistiques principales -->
+            <div class="cartes">
+                <!-- Carte avec le nombre total d'utilisateurs -->
+                <div class="carte">
+                    <p class="carte-titre">Utilisateurs</p>
+                    <p class="carte-valeur">1234</p>
+                    <p class="carte-lien"><a href="#gestion-utilisateurs">Gérer les utilisateurs</a></p>
+                </div>
+                <!-- Carte avec le nombre total de prestataires de services -->
+                <div class="carte">
+                    <p class="carte-titre">Prestataires de Services</p>
+                    <p class="carte-valeur">456</p>
+                    <p class="carte-lien"><a href="#gestion-prestataires">Gérer les prestataires</a></p>
+                </div>
+                <!-- Carte avec le nombre total de réservations -->
+                <div class="carte">
+                    <p class="carte-titre">Réservations</p>
+                    <p class="carte-valeur">7890</p>
+                    <p class="carte-lien"><a href="#gestion-reservations">Gérer les réservations</a></p>
+                </div>
+                <!-- Carte avec le nombre total de problèmes signalés -->
+                <div class="carte">
+                    <p class="carte-titre">Problèmes</p>
+                    <p class="carte-valeur">12</p>
+                    <p class="carte-lien"><a href="#gestion-problemes">Résoudre les problèmes</a></p>
+                </div>
+            </div>
+
+        </section>
+        <!-- Sous-section avec les options de gestion des utilisateurs -->
+        <section id="gestion-utilisateurs">
+            <h3>Gestion des Utilisateurs</h3>
+            <!-- Formulaire pour rechercher un utilisateur par son nom, son prénom ou son email -->
+            <form id="recherche-utilisateur" method="POST" action="recherche-utilisateur.php">
+                <label for="critere">Rechercher un utilisateur par :</label>
+                <select id="critere" name="critere">
+                    <option value="nom">Nom</option>
+                    <option value="prenom">Prénom</option>
+                    <option value="email">Email</option>
+                </select>
+                <input type="text" id="valeur" name="valeur" placeholder="Entrez la valeur à rechercher" required>
+                <input type="submit" id="rechercher" name="rechercher" value="Rechercher">
+            </form>
+            <!-- Tableau pour afficher la liste des utilisateurs trouvés -->
+            <table id="resultat-recherche-utilisateur">
+                <!-- En-tête du tableau avec les noms des colonnes -->
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau avec les données des utilisateurs -->
+                <tbody id="donnees-utilisateurs">
+                    <!-- Les lignes du tableau sont générées dynamiquement par le script JavaScript -->
+                    <!-- Ajout d'exemples de données d'utilisateurs -->
+                    <tr>
+                        <td>Dupont</td>
+                        <td>Jean</td>
+                        <td>jean.dupont@application.com</td>
+                        <td>Visiteur</td>
+                        <td><a href="modifier-utilisateur.html?id=1" class="action-button modifier">Modifier</a>
+                            <a href="#" class="action-button supprimer">Supprimer</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Martin</td>
+                        <td>Marie</td>
+                        <td>marie.martin@application.com</td>
+                        <td>Médecin</td>
+                        <td><a href="modifier-utilisateur.html?id=2" class="action-button modifier">Modifier</a>
+                            <a href="#" class="action-button supprimer">Supprimer</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Durand</td>
+                        <td>Pierre</td>
+                        <td>pierre.durand@application.com</td>
+                        <td>Administrateur</td>
+                        <td><a href="modifier-utilisateur.html?id=3" class="action-button modifier">Modifier</a>
+                            <a href="#" class="action-button supprimer">Supprimer</a>
+                        </td>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Sous-section avec les options de gestion des contenus -->
+        <section id="gestion-contenus">
+            <h3>Gestion des Contenus</h3>
+
+            <!-- Formulaire pour ajouter ou modifier un contenu -->
+            <form id="ajout-modification-contenu" method="POST" action="ajout-modification-contenu.php">
+                <!-- Champ caché pour stocker l'identifiant du contenu à modifier -->
+                <input type="hidden" id="id-contenu" name="id-contenu">
+                <!-- Champ pour saisir le titre du contenu -->
+                <label for="titre-contenu">Titre du contenu :</label>
+                <input type="text" id="titre-contenu" name="titre-contenu" placeholder="Entrez le titre du contenu"
+                    required>
+
+                <!-- Champ pour saisir le texte du contenu -->
+                <label for="texte-contenu">Texte du contenu :</label>
+                <textarea id="texte-contenu" name="texte-contenu" placeholder="Entrez le texte du contenu"
+                    required></textarea>
+
+                <!-- Champ pour sélectionner le type du contenu (statistique, aide, FAQ, etc.) -->
+                <label for="type-contenu">Type du contenu :</label>
+                <select id="type-contenu" name="type-contenu" required>
+                    <option value="statistique">Statistique</option>
+                    <option value="aide">Aide</option>
+                    <option value="faq">FAQ</option>
+                    <!-- D'autres types de contenu peuvent être ajoutés ici -->
+                </select>
+
+                <!-- Bouton pour ajouter ou modifier le contenu -->
+                <input type="submit" id="ajouter-modifier" name="ajouter-modifier" value="Ajouter">
+            </form>
+
+            <!-- Tableau pour afficher la liste des contenus existants -->
+            <table id="liste-contenus">
+                <!-- En-tête du tableau avec les noms des colonnes -->
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Texte</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau avec les données des contenus -->
+                <tbody id="donnees-contenus">
+                    <!-- Les lignes du tableau sont générées dynamiquement par le script JavaScript -->
+                    <!-- Ajout d'exemples de données de contenus -->
+                    <tr>
+                        <td>Nombre de réservations par mois</td>
+                        <td>Le graphique ci-dessous montre l'évolution du nombre de réservations effectuées sur
+                            l'application par mois.</td>
+                        <td>Statistique</td>
+                        <td><a href="#" class="action-button modifier">Modifier</a>
+                            <a href="#" class="action-button supprimer">Supprimer</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comment créer un compte ?</td>
+                        <td>Pour créer un compte sur l'application, vous devez cliquer sur le bouton "Compte" dans le
+                            menu de navigation, puis sur le lien "S'inscrire". Vous devrez ensuite remplir un formulaire
+                            avec vos informations personnelles et choisir un mot de passe. Une fois le formulaire
+                            validé, vous recevrez un email de confirmation avec un lien pour activer votre compte.</td>
+                        <td>Aide</td>
+                        <td><a href="#" class="action-button modifier">Modifier</a>
+                            <a href="#" class="action-button supprimer">Supprimer</a>
+                        </td>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Sous-section avec les options de gestion des commentaires et avis -->
+        <section id="gestion-commentaires-avis">
+            <h3>Gestion des Commentaires et Avis</h3>
+
+            <!-- Tableau pour afficher la liste des commentaires et avis laissés par les utilisateurs -->
+            <table id="liste-commentaires-avis">
+                <!-- En-tête du tableau avec les noms des colonnes -->
+                <thead>
+                    <tr>
+                        <th>Utilisateur</th>
+                        <th>Médecin</th>
+                        <th>Commentaire</th>
+                        <th>Note</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <!-- Corps du tableau avec les données des commentaires et avis -->
+                <tbody id="donnees-commentaires-avis">
+                    <!-- Les lignes du tableau sont générées dynamiquement par le script JavaScript -->
+                    <!-- Ajout d'exemples de données de commentaires et avis -->
+                    <tr>
+                        <td>Jean Dupont</td>
+                        <td>Dr. Marie Martin</td>
+                        <td>Très bon accueil, consultation efficace et professionnelle.</td>
+                        <td>5/5</td>
+                        <td>01/10/2023</td>
+                        <td><a href="#" class="action-button approuver">Approuver</a>
+                            <a href="#" class="action-button rejeter">Rejeter</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pierre Durand</td>
+                        <td>Dr. Paul Leroy</td>
+                        <td>Attente trop longue, médecin désagréable et peu à l'écoute.</td>
+                        <td>1/5</td>
+                        <td>02/10/2023</td>
+                        <td><a href="#" class="action-button approuver">Approuver</a>
+                            <a href="#" class="action-button rejeter">Rejeter</a>
+                        </td>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <!-- Pied de page avec les informations de contact et les mentions légales -->
+    <footer>
+
+        <div class="legal">
+            <p>&copy; 2023 Rendez-Vous Médicaux. Tous droits réservés.</p>
+            <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a> | <a href="#">Conditions
+                    générales d'utilisation</a></p>
+        </div>
+        <div class="reseaux-sociaux">
+            <p>Suivez-nous sur :</p>
+            <ul>
+                <!-- Ajout des liens vers les pages des réseaux sociaux avec des icônes -->
+                <li><a href="https://www.facebook.com/application"><img
+                            src="Facebook-logo-3d-button-social-media-png-3.png" alt="Facebook"> Facebook</a></li>
+                <li><a href="https://www.twitter.com/application"><img src="twitter-logo-round.png" alt="Twitter">
+                        Twitter</a></li>
+                <li><a href="https://www.instagram.com/application"><img src="new-instagram-logo-clipart-16.jpg"
+                            alt="Instagram"> Instagram</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <p>Contactez-nous :</p>
+            <ul>
+                <li><a href="mailto:contact@application.com">contact@application.com</a></li>
+                <li><a href="tel:+22112345678">+221 12 345 678</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
