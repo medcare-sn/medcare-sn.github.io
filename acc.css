@@ -253,3 +253,38 @@ div.inf {
         font-size: 15px;
     }
 }
+
+
+
+/* Styles pour la bannière des cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+.cookie-text {
+    margin-bottom: 10px;
+}
+
+.cookie-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cookie-button-accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cookie-button-refuse {
+    background-color: red;
+    color: white;
+}
