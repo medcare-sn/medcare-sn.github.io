@@ -22,6 +22,7 @@
         </nav>
         <div id="menu-btn" class="fas fa-bars"></div>
     </header>
+
     <!--la partie concerne l'image et les ecritures qui figurent la dessus-->
     <div class="partie1">
         <img src="hawa.jpg" class="image2">
@@ -103,6 +104,29 @@
             <a class="voir" href="comment.html">Voir Plus</a>
         </div>
     </div>
+    <?php
+    // Démarrez la session
+    session_start();
+
+    // Vérifiez si l'utilisateur est connecté
+    if(isset($_SESSION['prenom'])) {
+        // Si oui, affichez un message de bienvenue avec le prénom de l'utilisateur
+        echo '<p>Bonjour, ' . $_SESSION['prenom'] . '</p>';
+    } else {
+        // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+        header("Location: login.php");
+        exit();
+    }
+    ?>
+    <!-- Début de la bannière des cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p class="cookie-text">Ce site utilise des cookies pour améliorer votre expérience et nous aider à comprendre
+            comment vous utilisez notre site. En continuant à naviguer sur ce site, vous acceptez notre utilisation des
+            cookies.</p>
+        <button class="cookie-button cookie-button-accept" onclick="acceptCookies()">Accepter</button>
+        <button class="cookie-button cookie-button-refuse" onclick="refuseCookies()">Refuser</button>
+    </div>
+    <!-- Fin de la bannière des cookies -->
     <script>
         let menu = document.querySelector('#menu-btn');
         let navbar = document.querySelector('.navbar');
@@ -117,6 +141,39 @@
             menu.classList.remove('fa-times');
             navbar.classList.remove('active');
         }
+        // Afficher la bannière des cookies
+        document.getElementById('cookieBanner').style.display = 'block';
+
+        // Fonction pour accepter les cookies
+        function acceptCookies() {
+            // Enregistrement du consentement dans le stockage local du navigateur
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Masquage de la bannière des cookies
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Appeler une fonction pour récupérer les données des cookies
+            getCookieData();
+        }
+        // Fonction pour récupérer les données des cookies
+        function getCookieData() {
+            // Récupérer les données stockées dans les cookies
+            var userData = localStorage.getItem('userData');
+
+            // Vérifier si des données sont disponibles
+            if (userData) {
+                // Afficher les données récupérées
+                alert("Les données stockées dans les cookies sont : " + userData);
+            } else {
+                // Avertir si aucune donnée n'est disponible
+                alert("Aucune donnée stockée dans les cookies.");
+            }
+        }
+        // Fonction pour refuser les cookies
+        function refuseCookies() {
+            // Code pour gérer le refus des cookies (vous pouvez ajouter votre propre logique ici)
+            // Par exemple, fermer la fenêtre
+            window.close();
+        }
+
     </script>
 </body>
 
