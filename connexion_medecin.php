@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 $serveur = 'localhost';
@@ -39,72 +39,3 @@ if (isset($_POST['Se_connecter'])) {
 
 $conn->close();
 ?>
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>MEDECIN</title>
-    <link rel="stylesheet" href="style3.css"> 
-</head>
-<body>
-    <div class="accueil">
-        <p></p>
-        <h1><marquee>CONNEXION</marquee></h1>
-        <form action="" method="post">
-            <div class="coordonnees">
-                <p>
-                    <label for="email" class="a">Adresse électronique:</label>
-                    <input type="email" id="email" name="email" placeholder="xxx@gmail.com"/>
-                </p>
-                <p>
-                    <label for="mot_de_passe">Mot de passe:</label>
-                    <input type="password" id="mot_de_passe" name="mot_de_passe"/>
-                </p>
-            </div>
-            <div class="l">
-                <button type="submit" name="Se_connecter">Se connecter</button>
-            </div>
-            <small>Vous n'avez pas de compte.</small>
-            <div class="l">
-                <a href="medecin.html">Inscrivez-vous</a>
-            </div>
-        </form>
-    </div>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>MEDECIN</title>
-    <link rel="stylesheet" href="style3.css"> 
-</head>
-<body>
-    <div class="accueil">
-        <p></p>
-        <h1><marquee>CONNEXION</marquee></h1>
-        <form action="" method="post">
-            <div class="coordonnees">
-                <p>
-                    <label for="email" class="a">Adresse électronique:</label>
-                    <input type="email" id="email" name="email" placeholder="xxx@gmail.com"/>
-                </p>
-                <p>
-                    <label for="mot_de_passe">Mot de passe:</label>
-                    <input type="password" id="mot_de_passe" name="mot_de_passe"/>
-                </p>
-            </div>
-            <div class="l">
-                <button type="submit" name="Se_connecter">Se connecter</button>
-            </div>
-            <small>Vous n'avez pas de compte.</small>
-            <div class="l">
-                <!-- Modifiez le lien ci-dessous pour pointer vers Inscription_medecin.php -->
-                <a href="Inscription_medecin.php">Inscrivez-vous</a>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
